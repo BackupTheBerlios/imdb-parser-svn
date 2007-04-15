@@ -5,11 +5,10 @@
 /**
 * class.imdb_parser.php (php4)
 * Parse information of any film - need a fetched imdb.com video-detail-site
-* @author       Bernd Essl <bernd@ak47.at>
-* @copyright    Bernd Essl <bernd@ak47.at>
+* @author       Bernd Essl <bernd@codein.at>
+* @copyright    Bernd Essl <bernd@codein.at>
 * @license      license   http://gnu.org/copyleft/gpl.html GNU GPL
-* @version      SVN: 8
-* @link         http://ak-47.at/
+* @link         http://codein.at/
 */
 
 
