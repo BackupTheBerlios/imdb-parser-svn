@@ -66,17 +66,6 @@ foreach($IMDB_Parser->getMovieCountry($imdb_website) as $value)
 // output movie-directed by
 print "<br />Directed by: ".$IMDB_Parser->getMovieDirectedBy($imdb_website);
 
-// output "all" movie-directed by
-print "<br />Directed by (all): ";
-$a_directors = $IMDB_Parser->getMovieDirectedBy($imdb_website, $all_directors=True);
-for ($i=0; $i<count($a_directors[1]); $i++)
-{
-    //print $a_directors[0][$i].", "; #html with <br>
-    print $a_directors[1][$i].", ";
-    print $a_directors[2][$i].", ";
-    print ' | ';
-}
-
 // output movie-picture path
 print "<br />Picture Path: ".$IMDB_Parser->getMoviePicture($imdb_website);
 

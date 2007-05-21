@@ -56,21 +56,11 @@ class IMDB_Parser
     {
         if ($all_directors === True)
         {
-            if (preg_match('/<h5>Directed by<\/h5>(.+)<h5>Writing/sU', $imdb_website, $hit))
-            {
-                if (preg_match_all( '/<a href="\/name\/(nm\d{1,8})\/">(.+?)<\/a><br\/>/', $hit[0], $results, PREG_PATTERN_ORDER)) 
-                {
-                    return $results;
-                }
-                else
-                {
-                    return False;
-                }
-            }
+            return False;
         }
         else
         {
-            if (preg_match('/Directed by<\/h5>.?<a href="\/name\/[a-z0-9]+\/">(.+)<\/a>/sU', $imdb_website, $hit)) 
+            if (preg_match('/Director:<\/h5>.?<a href="\/name\/[a-z0-9]+\/">(.+)<\/a>/sU', $imdb_website, $hit)) 
             {
                 return $hit[1];
             }
