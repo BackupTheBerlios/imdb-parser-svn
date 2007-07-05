@@ -254,5 +254,34 @@ class IMDB_Parser
             return False;
         }
     }
+
+
+    function getMovieAwards($imdb_website)
+    {
+        #contributed by D3FiANC3 
+        if (preg_match('/h5>([^<]*)\<a class="tn15more inline" href="\/rg\/title-tease\/awards/', $imdb_website, $hit))
+        {
+            return $hit[1];
+        }
+        else
+        {
+            return False;
+        }
+    }
+
+
+    function getMovieVotes($imdb_website)
+    {
+        #contributed by D3FiANC3 
+        if (preg_match('/\<small\>\(\<a href="ratings"\>([^<]+)\<\/a\>\)\<\/small\>/', $imdb_website, $hit))
+        {
+            return $hit[1];
+        }
+        else
+        {
+            return False;
+        }
+    }
+
 }  
 ?>

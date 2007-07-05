@@ -1,7 +1,7 @@
 IMDB_Parser - parsing imdb.com site
 
 bernd essl bernd@codein.at
-Sun Apr 15 11:34:07 CEST 2007
+Thu Jul  5 19:01:08 CEST 2007
 ===================================
 
 * Intro
@@ -39,6 +39,8 @@ $IMDB_Parser->getMovieYear($imdb_website)
 $IMDB_Parser->getMovieRuntime($imdb_website)
 $IMDB_Parser->getMovieStars($imdb_website)
 $IMDB_Parser->getMovieAka($imdb_website)
+$IMDB_Parser->getMovieVotes($imdb_website)
+$IMDB_Parser->getMovieAwards($imdb_website)
 
 * SVN
 

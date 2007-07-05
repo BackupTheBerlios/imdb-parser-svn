@@ -87,4 +87,7 @@ print "<br />Stars: ".$IMDB_Parser->getMovieStars($imdb_website);
 
 // output also known as
 print "<br />Also known as: ".$IMDB_Parser->getMovieAka($imdb_website);
+
+// output votes
+print "<br />Votes: ".$IMDB_Parser->getMovieVotes($imdb_website);
 ?>
