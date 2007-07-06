@@ -140,7 +140,7 @@ class IMDB_Parser
     function getMoviePlot($imdb_website)
     {
         //sometimes "Plot Outline" or "Plot Summary"
-        if (preg_match('/Plot .{7}:\<\/h5>([^<]*)(\<a class="tn15more inline" href="\/rg\/title-tease\/plotsummary|\<\/div>)/', $imdb_website, $hit))
+        if (preg_match('/Plot .{7}:\<\/h5>([^<]+)(\<a class="tn15more inline" href="\/rg\/title-tease\/plotsummary|\<\/div>)/', $imdb_website, $hit))
         {
             return $hit[1];
         }
@@ -153,7 +153,7 @@ class IMDB_Parser
     
     function getMovieTagline($imdb_website)
     {
-        if (preg_match('/Tagline:\<\/h5>([^<]*)(\<a class="tn15more inline" href="\/rg\/title-tease\/taglines|\<\/div>)/', $imdb_website, $hit)) 
+        if (preg_match('/Tagline:\<\/h5>([^<]+)(\<a class="tn15more inline" href="\/rg\/title-tease\/taglines|\<\/div>)/', $imdb_website, $hit)) 
         {
             return $hit[1];
         }
@@ -166,7 +166,7 @@ class IMDB_Parser
     
     function getMovieTitle($imdb_website)
     {
-        if (preg_match('/\<title\>([^"]*)\<\/title\>/', $imdb_website, $hit)) 
+        if (preg_match('/\<title\>([^"]+)\<\/title\>/', $imdb_website, $hit)) 
         {
             return $hit[1];
         }
@@ -192,7 +192,7 @@ class IMDB_Parser
     
     function getMoviePicture($imdb_website)
     {
-        if (preg_match('/ src="([^"]*)/', $this->getMoviePictureHtml($imdb_website), $hit))
+        if (preg_match('/ src="([^"]+)/', $this->getMoviePictureHtml($imdb_website), $hit))
         {
             return $hit[1];
         }
@@ -205,7 +205,7 @@ class IMDB_Parser
 
     function getMovieYear($imdb_website)
     {
-        if (preg_match('/\/Sections\/Years\/([^"]*)/', $imdb_website, $hit))
+        if (preg_match('/\/Sections\/Years\/([^"]+)/', $imdb_website, $hit))
         {
             return $hit[1];
         }
@@ -245,7 +245,7 @@ class IMDB_Parser
 
     function getMovieAka($imdb_website)
     {
-        if (preg_match('/Also Known As:<\/h5>(.+)<br>/', $imdb_website, $hit))
+        if (preg_match('/Also Known As:<\/h5>([^<]+)<br>/', $imdb_website, $hit))
         {
             return $hit[1];
         }
@@ -259,7 +259,7 @@ class IMDB_Parser
     function getMovieAwards($imdb_website)
     {
         #contributed by D3FiANC3 
-        if (preg_match('/h5>([^<]*)\<a class="tn15more inline" href="\/rg\/title-tease\/awards/', $imdb_website, $hit))
+        if (preg_match('/h5>([^<]+)\<a class="tn16more inline" href="\/rg\/title-tease\/awards/', $imdb_website, $hit))
         {
             return $hit[1];
         }
