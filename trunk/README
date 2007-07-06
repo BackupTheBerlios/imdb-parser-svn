@@ -51,5 +51,7 @@ svn checkout svn://svn.berlios.de/imdb-parser/trunk imdb-parser
 
 Feel free to report any problems, comments or whatever.
 
+* Thanks
 
-thanks to berlios.de for hosting the project.
+to berlios.de for hosting the project.
+Guvenc kaplan, Erik aka D3FiANC3 and all the other contributers & bugreporters. 

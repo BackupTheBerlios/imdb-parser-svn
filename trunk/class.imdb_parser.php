@@ -139,8 +139,8 @@ class IMDB_Parser
     
     function getMoviePlot($imdb_website)
     {
-    //sometimes "Plot Outline" or "Plot Summary"
-    if (preg_match('/\/h5>([^<]*)\<a class="tn15more inline" href="\/rg\/title-tease\/plotsummary/', $imdb_website, $hit)) 
+        //sometimes "Plot Outline" or "Plot Summary"
+        if (preg_match('/Plot .{7}:\<\/h5>([^<]*)(\<a class="tn15more inline" href="\/rg\/title-tease\/plotsummary|\<\/div>)/', $imdb_website, $hit))
         {
             return $hit[1];
         }
@@ -153,7 +153,7 @@ class IMDB_Parser
     
     function getMovieTagline($imdb_website)
     {
-        if (preg_match('/h5>([^<]*)\<a class="tn15more inline" href="\/rg\/title-tease\/taglines/', $imdb_website, $hit)) 
+        if (preg_match('/Tagline:\<\/h5>([^<]*)(\<a class="tn15more inline" href="\/rg\/title-tease\/taglines|\<\/div>)/', $imdb_website, $hit)) 
         {
             return $hit[1];
         }
