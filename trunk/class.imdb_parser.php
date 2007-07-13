@@ -60,7 +60,7 @@ class IMDB_Parser
         }
         else
         {
-            if (preg_match('/Director:<\/h5>.?<a href="\/name\/[a-z0-9]+\/">(.+)<\/a>/sU', $imdb_website, $hit)) 
+            if (preg_match('/Directors?:<\/h5>.?<a href="\/name\/[a-z0-9]+\/">(.+)<\/a>/sU', $imdb_website, $hit)) 
             {
                 return $hit[1];
             }
