@@ -2,9 +2,6 @@
 
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
-$revision = '$Rev:$';
-$date     = '$Date:$';
-
 /**
 * class.imdb_parser.php (php4)
 * Parse information of any film - need a fetched imdb.com video-detail-site
@@ -12,7 +9,6 @@ $date     = '$Date:$';
 * @copyright    Bernd Essl <bernd@codein.at>
 * @license      license   http://gnu.org/copyleft/gpl.html GNU GPL
 * @link         http://codein.at/
-* @version		$revision
 */
 
 
