@@ -2,6 +2,9 @@
 
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
+$revision = '$Rev:$';
+$date     = '$Date:$';
+
 /**
 * class.imdb_parser.php (php4)
 * Parse information of any film - need a fetched imdb.com video-detail-site
@@ -9,13 +12,14 @@
 * @copyright    Bernd Essl <bernd@codein.at>
 * @license      license   http://gnu.org/copyleft/gpl.html GNU GPL
 * @link         http://codein.at/
+* @version		$revision
 */
 
 
 class IMDB_Parser
 {
 
-    
+	
     function getMovieActors($imdb_website, $name_and_id=False)
     {
         if (preg_match('/<table class="cast">(.+)<\/table>/', $imdb_website, $hit))
