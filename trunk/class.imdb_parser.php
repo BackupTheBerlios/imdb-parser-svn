@@ -9,7 +9,7 @@
 * @copyright    Bernd Essl <bernd_at_b23.at>
 * @license      license   http://gnu.org/copyleft/gpl.html GNU GPL
 * @link         http://b23.at/
-* @version      $Id$
+* @version      $LastChangedRevision$
 */
 
 
@@ -75,7 +75,7 @@ class IMDB_Parser
     
     function getMovieColor($imdb_website)
     {
-        if (preg_match('/<a href="\/List\?color-info=.+">(.+)<\/a>/', $imdb_website, $hit)) 
+        if (preg_match('/<a href="/List\?color-info=.+">(.+)<\/a>/', $imdb_website, $hit)) 
         {
             return $hit[1];
         }
