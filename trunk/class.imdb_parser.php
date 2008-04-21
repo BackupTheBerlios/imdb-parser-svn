@@ -75,7 +75,7 @@ class IMDB_Parser
     
     function getMovieColor($imdb_website)
     {
-        if (preg_match('/<a href="/List\?color-info=.+">(.+)<\/a>/', $imdb_website, $hit)) 
+        if (preg_match('/<a href="\/List\?color-info.+>([^<]+)<\/a>/i',$imdb_website, $hit))
         {
             return $hit[1];
         }
@@ -141,7 +141,7 @@ class IMDB_Parser
     function getMoviePlot($imdb_website)
     {
         //sometimes "Plot Outline" or "Plot Summary"
-        if (preg_match('/Plot .{7}:\<\/h5>([^<]+)(\<a class="tn15more inline" href="\/rg\/title-tease\/plotsummary|\<\/div>)/', $imdb_website, $hit))
+        if (preg_match('/Plot .{7}:<\/h5>([^<]+)</', $imdb_website, $hit))        
         {
             return $hit[1];
         }
@@ -154,7 +154,7 @@ class IMDB_Parser
     
     function getMovieTagline($imdb_website)
     {
-        if (preg_match('/Tagline:\<\/h5>([^<]+)(\<a class="tn15more inline" href="\/rg\/title-tease\/taglines|\<\/div>)/', $imdb_website, $hit)) 
+        if (preg_match('/Tagline:<\/h5>([^<]+)</', $imdb_website, $hit))        
         {
             return $hit[1];
         }
@@ -281,6 +281,49 @@ class IMDB_Parser
         else
         {
             return False;
+        }
+    }
+
+
+    function getMovieMPAA($imdb_website)
+    {
+        #contributed by Edward Husar         
+        if (preg_match('/MPAA<\/a>:<\/h5>([^<]+)<\/div>/', $imdb_website, $hit))
+        {
+            return $hit[1];
+        }
+        else
+        {
+            return False;
+
+        }
+    }
+
+
+    function getMovieAspectRatio($imdb_website)
+    {
+        if (preg_match('/<h5>Aspect Ratio:<\/h5>([^<]+)<a class/', $imdb_website, $hit))
+        {
+            return $hit[1];
+        }
+        else
+        {
+            return False;
+
+        }
+    }
+
+
+    function getMovieSoundMix($imdb_website)
+    {
+        if (preg_match('/<a href="\/List\?sound-mix.+>([^<]+)<\/a>/i',$imdb_website, $hit))
+        {
+            return $hit[1];
+        }
+        else
+        {
+            return False;
+
         }
     }
 

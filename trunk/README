@@ -1,7 +1,7 @@
 IMDB_Parser - parsing imdb.com site
 
 bernd essl bernd_at_b23.at
-Thu Jul  5 19:01:08 CEST 2007
+Thu Feb 21 13:52:41 CET 2008
 ===================================
 
 * Intro
@@ -54,4 +54,4 @@ Feel free to report any problems, comments or whatever.
 * Thanks
 
 to berlios.de for hosting the project.
-Guvenc kaplan, Erik aka D3FiANC3 and all the other contributers & bugreporters. 
+Guvenc kaplan, Erik aka D3FiANC3, Edward Husar and all the other contributers & bugreporters. 
