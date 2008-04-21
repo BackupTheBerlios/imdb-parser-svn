@@ -327,5 +327,20 @@ class IMDB_Parser
         }
     }
 
+
+    function getMovieReleaseDate($imdb_website)
+    {
+        #contributed by Edward Husar
+        if (preg_match('/Release Date:<\/h5>([^<]+)<a class/', $imdb_website, $hit))
+        {
+            return $hit[1];
+        }
+        else
+        {
+            return False;
+        }
+    }
+
+
 }  
 ?>
