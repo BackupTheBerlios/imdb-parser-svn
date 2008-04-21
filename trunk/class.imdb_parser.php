@@ -342,5 +342,18 @@ class IMDB_Parser
     }
 
 
+    function getMovieCompany($imdb_website)
+    {
+        if (preg_match('/<a href="\/company.+>([^<]+)<\/a>/i',$imdb_website, $hit))
+        {
+            return $hit[1];
+        }
+        else
+        {
+            return False;
+        }
+    }
+
+
 }  
 ?>

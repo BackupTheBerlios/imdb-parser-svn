@@ -105,4 +105,7 @@ print "<br />Sound Mix: ".$IMDB_Parser->getMovieSoundMix($imdb_website);
 
 // ouput Release Date
 print "<br />Release Date: ".$IMDB_Parser->getMovieReleaseDate($imdb_website);
+
+// ouput Company 
+print "<br />Company: ".$IMDB_Parser->getMovieCompany($imdb_website);
 ?>
