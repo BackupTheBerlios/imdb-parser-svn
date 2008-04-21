@@ -102,6 +102,9 @@ print "<br />MPAA: ".$IMDB_Parser->getMovieMPAA($imdb_website);
 // output Aspect Ratio
 print "<br />Aspect Ratio: ".$IMDB_Parser->getMovieAspectRatio($imdb_website);
 
+// output Awards
+print "<br />Awards: ".$IMDB_Parser->getMovieAwards($imdb_website);
+
 // output Sound Mix
 print "<br />Sound Mix: ".$IMDB_Parser->getMovieSoundMix($imdb_website);
 ?>

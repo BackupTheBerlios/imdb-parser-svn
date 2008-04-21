@@ -260,7 +260,7 @@ class IMDB_Parser
     function getMovieAwards($imdb_website)
     {
         #contributed by D3FiANC3 
-        if (preg_match('/h5>([^<]+)\<a class="tn16more inline" href="\/rg\/title-tease\/awards/', $imdb_website, $hit))
+        if (preg_match('/Awards:<\/h5>([^<]+)<a class/', $imdb_website, $hit))
         {
             return $hit[1];
         }
