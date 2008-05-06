@@ -140,8 +140,7 @@ class IMDB_Parser
     
     function getMoviePlot($imdb_website)
     {
-        //sometimes "Plot Outline" or "Plot Summary"
-        if (preg_match('/Plot .{7}:<\/h5>([^<]+)</', $imdb_website, $hit))        
+        if (preg_match('/Plot:<\/h5>([^<]+)</', $imdb_website, $hit))        
         {
             return $hit[1];
         }
